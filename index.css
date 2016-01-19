@@ -1,0 +1,168 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #1f1111;
+    margin: 0;
+    padding: 0;
+}
+
+/* center of page frame of reference, governed by window size */
+.center {
+    position: absolute;
+    z-index: 0;
+    /*
+    perspective: 1000px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    */
+}
+
+/* map frame of reference, relative to center, 1s animated transitions */
+.origin {
+    position: absolute;
+    transition: top 1000ms, left 1000ms;
+    -webkit-transition: top 1000ms, left 1000ms;
+    /*
+    -webkit-transition: -webkit-transform 100ms;
+    transition: transform 100ms;
+    transform-style: preserve-3d;
+    */
+}
+
+/* user frame of reference, asymptotically approaches window center, 100ms
+ * animated transitions, so the origin moves to catch up */
+.cursor {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    outline: dashed white 1px;
+    transition: top 100ms, left 100ms, width 100ms, height 100ms;
+    -webkit-transition: top 100ms, left 100ms, width 100ms, height 100ms;
+    /*
+    transition: transform 100ms;
+    -webkit-transition: -webkit-transform 100ms;
+    */
+}
+
+.knob {
+    position: absolute;
+    border: dashed white 1px;
+    margin: 6px;
+    border-radius: 10px;
+    transition: top 100ms, left 100ms, width 100ms, height 100ms, opacity 500ms;
+    -webkit-transition: top 100ms, left 100ms, width 100ms, height 100ms, opacity 500ms;
+}
+
+.tile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #221111;
+}
+
+.space {
+    background-color: #333344;
+}
+
+.inspector {
+    background-color: #334455;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    height: 100%;
+}
+
+.menu {
+    background-color: #334455;
+    position: absolute;
+    width: 30%;
+    left: 0;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.colorline {
+    position: absolute;
+    overflow: hidden;
+    height: 200px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.modeline {
+    position: absolute;
+    overflow: hidden;
+    height: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.mode {
+    position: absolute;
+    color: #abb;
+    font-size: 20px;
+    padding-left: 10px;
+    background-color: #334455;
+    line-height: 40px;
+    height: 40px;
+    top: 40px;
+    left: 0;
+    right: 0;
+    transition: top 500ms;
+    -webkit-transition: top 500ms;
+}
+
+.mode u, .mode i {
+    color: #cee;
+}
+
+.mode.shown {
+    top: 0;
+}
+
+.button {
+    cursor: pointer;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+

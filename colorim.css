@@ -1,0 +1,129 @@
+.colorim {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.hueCenter {
+  position: absolute;
+  top: -60px;
+}
+.saturationCenter {
+  position: absolute;
+  top: 0;
+}
+.lightnessCenter {
+  position: absolute;
+  top: 60px;
+}
+.reticle {
+  transition: border-color 1s;
+}
+.reticle.active {
+  position: absolute;
+  top: -31px;
+  left: -31px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border: dashed black 1px;
+}
+.spectrum {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+}
+.swatch {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+body {
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  transition: color 500ms, background-color 1000ms;
+}
+a {
+  transition: color 500ms;
+}
+.appbox {
+  position: absolute;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.colorbox {
+  display: block;
+  position: relative;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.linebox a {
+  /*color: hsla(93, 13.00%, 75.00%, 1); */
+}
+.linebox {
+  /*color: hsla(93, 13.00%, 75.00%, 1); */
+  /*background-color: hsla(213, 50.00%, 50.00%, 1);*/
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-height: 3ex;
+  font-size: 20px;
+  padding: .5ex;
+}
+.displaybox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.helpbox {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.helpbox > span {
+  border: dotted 1px;
+  /*border-color: hsla(93, 13.00%, 75.00%, 1);*/
+  border-radius: 5px;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: span;
+  margin: 3px;
+  padding: 1px 10px;
+}
+.center {
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  position: relative;
+}
